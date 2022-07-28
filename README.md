@@ -17,12 +17,35 @@ eho -e 'blob' 9\oconteudo | openssl sha1
 Ou seja, usar blob junto com o comando echo + 9 (tamanho arquivo) + \o
 Tree -> árvores, armazenam blobs
 Blobs não armazenam o nome do arquivo já as árvores sim
-----------------------------------
--     Tree          <tamanho>    -
--                                -
--                                -
--  \o                            -
--                                -
--  blob     sa4d8s    texto.txt  -
-----------------------------------
-
+Tree -> <tamanho> 
+        \o 
+        blob 
+        sa4d8s 
+        texto.txt
+Commit -> é o mais completo, apontando a tree, blobs e outros commits antes dele. Junta tudo.
+          tree
+          parente
+          autor
+          mensagem
+          timestamp
+          <tamanho>
+          s4a5sq1
+          a98acq1
+          perkles
+          "inicia..."
+Para gerar chave pública e privada que são usadas para o reconhecimeneto da minha máquina, além do login e senha, chaves SSH e GPG, digitar no git bash:
+ssh-keygen -t ed25519 -c medeirospondian@gmail.com
+Não deu certo o código acima então digitei apenas:
+ssh-keygen
+Para achar a pasta com a chave SSH -> cd /c/User/caminho...
+Listar o que tem dentro da pasta -> ls
+A chave que tem pub na frente é a pública que vai para o github
+Para mostra o conteúdo do documento -> cat id_rsa.pub
+Completar comando -> tab
+Caminho completo de onde vc se encontra -> pwd
+Para criar Token no github clicar na minha foto de perfil que se encontra no canto superior na direita e depois em Settings, em seguida Developer settings, Personal acess tokens, Generate new token, dar um nome, 60 dias para expirar, selecionar repo
+Para abrir o git direto na pasta ou diretório que deseja, basta abrir a paasta desejada, então iniciar o git com a aba da pasta aberta, clicando com o botão direito do mouse em um espaço em branco, clicar em mostrar mais opções e depois em git bash here. Observe que o git vai inicializar já no diretório
+Limpar a tela -> Ctrl + l
+Criar pasta -> mkdir
+O git fica oculto dentro da pasta, sendo nececessário o comando ls -a para ser mostrado
+cd... -> voltar na pasta anterior
